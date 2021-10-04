@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>MOG Buccheri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
+    
+    <!-- A-Frame javascript -->
+    <script src="../dist/aframe-v1.0.4.min.js"></script>
+    <script src="../dist/aframe-href-component.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    
+  </head>  
+  
+  <body>
+
+    <a-scene canvas="" keyboard-shortcuts="" vr-mode-ui="">
+
+      <!--assets-->
+      <a-assets>
+        <img id="MOG_GF-Buccheri" src="../assets/img/MOG_GF-Buccheri.jpg" />
+        <img id="info" src="../assets/img/information.png" />
+        <img id="info_orange" src="../assets/img/information_orange.png" /> 
+        <img id="close" src="../assets/img/close-cross-circular-button.png" />
+        <img id="donato" src="../assets/img/donato.webp" />
+        <img id="gino" src="../assets/img/gino.webp" />
+        <img id="abelard" src="../assets/img/abelard.webp" />
+      </a-assets>
+
+      <!--360-degree image-->
+      <a-sky src="#MOG_GF-Buccheri" rotation="0 105 0"></a-sky>
+
+      <!--label information-->
+      <!--product: Man Belt-->
+      <a-image id="donatoTrigger" src="#info_orange" height="1" width="1" material="alphaTest: 0.5" position="-4 2 -1.99" rotation="0 35 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #donatoInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #donatoInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #donatoInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #donatoInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #donatoInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="donatoInfo" geometry="primitive: plane; height: 3.2; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="-4 4 -2" rotation="0 35 0">
+        <a-image id="donatoInfoImage" src="#donato" height="1.2" width="1.2" material="visible: false" position="-1.95 0.9 0.01"></a-image>
+        <a-entity id="donatoInfoText1" visible="false" text="value: DONATO NAVY BLACK \n369.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.65 0.9 0"></a-entity>
+        <a-entity id="donatoInfoText2" visible="false" text="value: Ikat pinggang reversible formal bertekstur kulit dengan detail logo dan dilengkapi dengan reversible adjustable buckle fastening. \n\nSPECIFICATIONS \nFull Grain Leather; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="-0.05 -0.75 0"></a-entity>
+        <a-image id="donatoInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.65 1.65 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #donatoTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #donatoInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #donatoInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #donatoInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #donatoInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <!--product: Man Boot-->
+      <a-image id="ginoTrigger" src="#info" height="1" width="1" material="alphaTest: 0.5" position="0.55 3 -5.99"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #ginoInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #ginoInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #ginoInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #ginoInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #ginoInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="ginoInfo" geometry="primitive: plane; height: 3.6; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="0.55 5.15 -6">
+        <a-image id="ginoInfoImage" src="#gino" height="1.2" width="1.2" material="visible: false" position="-1.9 1.1 0.01"></a-image>
+        <a-entity id="ginoInfoText1" visible="false" text="value: GINO BLACK \n799.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.8 1.05 0"></a-entity>
+        <a-entity id="ginoInfoText2" visible="false" text="value: Gino, Sepatu Chelsea Boots yang simple, elegant, dengan type plain toe. Cocok dipadu padankan dengan berbagai outfit kamu. \n\nSPECIFICATIONS \nCow Leather \nSize \n40 - 44; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="-0.05 -0.75 0"></a-entity>
+        <a-image id="ginoInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.65 1.8 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #ginoTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #ginoInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #ginoInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #ginoInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #ginoInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <!--Product: Man Sandal-->
+      <a-image id="abelardTrigger" src="#info_orange" height="1" width="1" material="alphaTest: 0.5" position="6 0.6 0.41" rotation="0 -50 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #abelardInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #abelardInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #abelardInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #abelardInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #abelardInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="abelardInfo" geometry="primitive: plane; height: 4.2; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="6 3.1 0.4" rotation="0 -50 0">
+        <a-image id="abelardInfoImage" src="#abelard" height="1.2" width="1.2" material="visible: false" position="-1.95 1.45 0.01"></a-image>
+        <a-entity id="abelardInfoText1" visible="false" text="value: ABELARD BLACK \n399.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.7 1.45 0"></a-entity>
+        <a-entity id="abelardInfoText2" visible="false" text="value: ABELARD, dibuat secara handmade dengan desain yang elegant menggunakan aksesoris trendi yang dikombinasikan dengan kulit sapi premium. Bagian insole sandal sepenuhnya dilapisi dengan kulit suede yang lembut dan empuk dengan daya tahan tinggi agar memberikan kenyamanan terbaik. Padukan dengan outfit casual favorit anda. \n\nMaterial: Leather \nSize: 39 - 43; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="-0.05 -0.75 0"></a-entity>
+        <a-image id="abelardInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.65 2.1 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #abelardTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #abelardInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #abelardInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #abelardInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #abelardInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+
+      <!--links-->
+      <a-entity geometry="primitive: circle; radius: 1" material="color: springgreen; side: double; opacity: 0.5" position="-4.4 0.6 4.4" rotation="0 90 0" look-at="#cursor" link="href: gf-buccheri-leftSide.html"
+                event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+                event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+                <a-entity text="value: Bagian \nKiri; color: #FFFFFF; width: 12; align: center; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="0 -0.4 0"></a-entity>
+      </a-entity>
+      <a-entity geometry="primitive: circle; radius: 1" material="color: springgreen; side: double; opacity: 0.5" position="4.4 0.6 4.4" rotation="0 -90 0" look-at="#cursor" link="href: gf-buccheri-rightSide.html"
+                event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+                event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+                <a-entity text="value: Bagian \nKanan; color: #FFFFFF; width: 12; align: center; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="0 -0.4 0"></a-entity>
+      </a-entity>
+      <a-entity geometry="primitive: circle; radius: 1" material="color: red; side: double; opacity: 0.5" position="0 0.6 9.6" rotation="0 180 0" look-at="#cursor" link="href: gf-06.html"
+                event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+                event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+                <a-entity text="value: Keluar; color: #FFFFFF; width: 12; align: center; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="0 -0.4 0"></a-entity>
+      </a-entity>
+
+      <!--camera + cursor-->
+      <a-entity position="0 1.8 4">
+        <a-camera id="camera" look-controls="" wasd-controls-enabled="false" camera="active: true" rotation="-1.3750987083139854 -3.0939720937064483 0" position="0 0 0">
+          <a-cursor id="cursor" cursor="fuse: true; fuseTimeout: 1500; maxDistance: 30" geometry="primitive: ring; radiusInner: 0.031; radiusOuter: 0.05" material="color: #00FFFF; shader: flat" position="0 0 -1"
+                    animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+                    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1">
+          </a-cursor>
+        </a-camera>
+      </a-entity>
+      
+    </a-scene>
+
+  </body>
+</html>

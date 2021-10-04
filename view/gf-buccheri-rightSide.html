@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>MOG Buccheri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
+    
+    <!-- A-Frame javascript -->
+    <script src="../dist/aframe-v1.0.4.min.js"></script>
+    <script src="../dist/aframe-href-component.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    
+  </head>  
+  
+  <body>
+
+    <a-scene canvas="" keyboard-shortcuts="" vr-mode-ui="">
+
+      <!--assets-->
+      <a-assets>
+        <img id="MOG_GF-Buccheri-rightSide" src="../assets/img/MOG_GF-Buccheri-rightSide.jpg" />
+        <img id="info" src="../assets/img/information.png" />
+        <img id="info_orange" src="../assets/img/information_orange.png" />
+        <img id="close" src="../assets/img/close-cross-circular-button.png" />
+        <img id="gaby" src="../assets/img/gaby_black.webp">
+        <img id="kanti" src="../assets/img/kanti_pink.webp" />
+        <img id="ediline" src="../assets/img/ediline_black.webp" />
+      </a-assets>
+
+      <!--360-degree image-->
+      <a-sky src="#MOG_GF-Buccheri-rightSide" rotation="0 176 0"></a-sky>
+
+      <!--label information-->
+      <!--Product: Women Flatshoe-->
+      <a-image id="gabyTrigger" src="#info" height="1" width="1" position="0.55 2.15 -3.99" rotation="0 0 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #gabyInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #gabyInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #gabyInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #gabyInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #gabyInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="gabyInfo" geometry="primitive: plane; height: 3.4; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="0.65 4.25 -4">
+        <a-image id="gabyInfoImage" src="#gaby" height="1.2" width="1.2" material="visible: false" position="-1.9 1 0.01"></a-image>
+        <a-entity id="gabyInfoText1" visible="false" text="value: GABY BLACK \n499.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.8 0.95 0"></a-entity>
+        <a-entity id="gabyInfoText2" visible="false" text="value: Gaby, flatshoes yang di desain khusus untuk memberikan Tampilan fashionable dengan model square toe dan aksen oversize logo memberikan kesan simple dan stylish. \n\nSpesifikasi: Leather \nSize: 36 - 40; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="0 -0.75 0"></a-entity>
+        <a-image id="gabyInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.2 1.3 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #gabyTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #gabyInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #gabyInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #gabyInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #gabyInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <!--Product: Women Wallet-->
+      <a-image id="kantiTrigger" src="#info" height="1" width="1" position="6.99 1.6 2.45" rotation="0 -90 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #kantiInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #kantiInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #kantiInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #kantiInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #kantiInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="kantiInfo" geometry="primitive: plane; height: 3.2; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="7 3.6 2.45" rotation="0 -90 0">
+        <a-image id="kantiInfoImage" src="#kanti" height="1.2" width="1.2" material="visible: false" position="-1.9 0.9 0.01"></a-image>
+        <a-entity id="kantiInfoText1" visible="false" text="value: KANTI PINK \n599.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.8 0.9 0"></a-entity>
+        <a-entity id="kantiInfoText2" visible="false" text="value: Tampil stylish dan modern dengan Kanti, clutch dengan 10 Credit Card Slots, 2 ID Window, 1 Zipper Pocket, 3 Bill Compartments. \n\nSPECIFICATIONS \nCow Leather; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="0 -0.75 0"></a-entity>
+        <a-image id="kantiInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.15 1.15 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #kantiTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #kantiInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #kantiInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #kantiInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #kantiInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <!--Product: Women Bag-->
+      <a-image id="edilineTrigger" src="#info" height="1" width="1" material="alphaTest: 0.5" position="-5.99 2.8 7.25" rotation="0 90 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #edilineInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #edilineInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #edilineInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #edilineInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #edilineInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="edilineInfo" geometry="primitive: plane; height: 4; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="-6 5.2 7.25" rotation="0 90 0">
+        <a-image id="edilineInfoImage" src="#ediline" height="1.2" width="1.2" material="visible: false" position="-1.9 1.3 0.01"></a-image>
+        <a-entity id="edilineInfoText1" visible="false" text="value: EDILINE BLACK \n1.239.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.8 1.25 0"></a-entity>
+        <a-entity id="edilineInfoText2" visible="false" text="value: EDILINE Handbag berdesain unik dengan detail accessories gold & terbuat dari material Full Grain Leather, sangat eksklusif saat dipakai. \nKeunggulan: Zipper closure, 2 Main Compartment, 2 Zipper pocket inside, 2 slide pocket, 1 zipper pocket outside, 2 Handle drop, 1 Adjustable Shoulder Strap \n\nSPECIFICATIONS \nCow Leather; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="0 -0.75 0"></a-entity>
+        <a-image id="edilineInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.15 1.55 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #edilineTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #edilineInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #edilineInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #edilineInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #edilineInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <!--links-->
+      <a-entity geometry="primitive: circle; radius: 1" material="color: springgreen; opacity: 0.5" position="0 0.4 8" rotation="0 180 0" look-at="#cursor" link="href: gf-buccheri.html"
+                event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+                event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+                <a-entity text="value: Bagian \nTengah; color: #FFFFFF; width: 12; align: center; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="0 -0.4 0"></a-entity>
+      </a-entity>
+
+      <!--camera + cursor-->
+      <a-entity position="0 1.8 4">
+        <a-camera id="camera" look-controls="" wasd-controls-enabled="false" camera="active: true" rotation="-1.3750987083139854 -3.0939720937064483 0" position="0 0 0">
+          <a-cursor id="cursor" cursor="fuse: true; fuseTimeout: 1500; maxDistance: 30" geometry="primitive: ring; radiusInner: 0.031; radiusOuter: 0.05" material="color: #00FFFF; shader: flat" position="0 0 -1"
+                    animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+                    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1">
+          </a-cursor>
+        </a-camera>
+      </a-entity>
+      
+    </a-scene>
+
+  </body>
+</html>
