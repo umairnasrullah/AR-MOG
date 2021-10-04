@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>MOG Buccheri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
+    
+    <!-- A-Frame javascript -->
+    <script src="../dist/aframe-v1.0.4.min.js"></script>
+    <script src="../dist/aframe-href-component.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    
+  </head>  
+  
+  <body>
+
+    <a-scene canvas="" keyboard-shortcuts="" vr-mode-ui="">
+
+      <!--assets-->
+      <a-assets>
+        <img id="MOG_GF-Buccheri-leftSide" src="../assets/img/MOG_GF-Buccheri-leftSide.jpg" />
+        <img id="info" src="../assets/img/information.png" />
+        <img id="info_orange" src="../assets/img/information_orange.png" />
+        <img id="close" src="../assets/img/close-cross-circular-button.png" />
+        <img id="treasa" src="../assets/img/treasa_black.webp" />
+        <img id="tabitha" src="../assets/img/tabitha_darkblue.webp" />
+        <img id="linnet" src="../assets/img/linnet_cream.webp" />
+      </a-assets>
+
+      <!--360-degree image-->
+      <a-sky src="#MOG_GF-Buccheri-leftSide" rotation="0 0 0"></a-sky>
+
+      <!--information-->
+      <!--Product: Woman Heels-->
+      <a-image id="treasaTrigger" src="#info" height="1" width="1" material="alphaTest: 0.5" position="2.4 1.9 -1.99" rotation="0 -25 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #treasaInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #treasaInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #treasaInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #treasaInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #treasaInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="treasaInfo" geometry="primitive: plane; height: 3.8; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="2.4 4.2 -2" rotation="0 -25 0">
+        <a-image id="treasaInfoImage" src="#treasa" height="1.2" width="1.2" material="visible: false" position="-1.9 1.2 0.01"></a-image>
+        <a-entity id="treasaInfoText1" visible="false" text="value: TREASA BLACK \n549.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.8 1.15 0"></a-entity>
+        <a-entity id="treasaInfoText2" visible="false" text="value: Treasa, heels Buccheri terbaru yang di desain khusus untuk memberikan Tampilan fashionable dengan back strap yang elegan dan praktis, menggunakan material Cow Leather memberikan kesan elegan untuk siapapun yang memakainya. \n\nSPECIFICATION: Cow Leather \nSize: 36 - 40; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="0 -0.75 0"></a-entity>
+        <a-image id="treasaInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.2 1.45 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #treasaTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #treasaInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #treasaInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #treasaInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #treasaInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <a-image id="linnetTrigger" src="#info_orange" height="1" width="1" material="alphaTest: 0.5" position="-4.1 0.5 -1.99" rotation="0 30 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #linnetInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #linnetInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #linnetInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #linnetInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #linnetInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="linnetInfo" geometry="primitive: plane; height: 3.8; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="-4.1 2.8 -2" rotation="0 30 0">
+        <a-image id="linnetInfoImage" src="#linnet" height="1.2" width="1.2" material="visible: false" position="-1.9 1.2 0.01"></a-image>
+        <a-entity id="linnetInfoText1" visible="false" text="value: LINNET CREAM \n469.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.8 1.15 0"></a-entity>
+        <a-entity id="linnetInfoText2" visible="false" text="value: Linnet merupakan sepatu pumps yang didesain menggunakan Buccheri Premium Leather yang memberikan kenyamanan ekstra dan dengan model yang simple & cocok untuk kaum wanita yang aktif dan ingin tampil lebih bergaya. \n\nSPECIFICATION: Full Grain Leather \nSize: 36 - 40; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="0 -0.75 0"></a-entity>
+        <a-image id="linnetInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.2 1.45 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #linnetTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #linnetInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #linnetInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #linnetInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #linnetInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <!--Product: Woman Sandal-->
+      <a-image id="tabithaTrigger" src="#info_orange" height="1" width="1" material="alphaTest: 0.5" position="3.99 0.2 3.4" rotation="0 -90 0"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+               event-set__tarvis01="_event: click; _target: #tabithaInfo; material.visible: true"
+               event-set__tarvis02="_event: click; _target: #tabithaInfoImage; material.visible: true"
+               event-set__tarvis03="_event: click; _target: #tabithaInfoText1; visible: true"
+               event-set__tarvis04="_event: click; _target: #tabithaInfoText2; visible: true"
+               event-set__tarvis05="_event: click; _target: #tabithaInfoClose; material.visible: true"
+               event-set__resvis="_event: click; material.visible: false">
+      </a-image>
+      <a-entity id="tabithaInfo" geometry="primitive: plane; height: 3.4; width: 5.25" material="color: #000080; opacity: 1; visible: false" position="4 2.3 3.4" rotation="0 -90 0">
+        <a-image id="tabithaInfoImage" src="#tabitha" height="1.2" width="1.2" material="visible: false" position="-1.95 1.05 0.01"></a-image>
+        <a-entity id="tabithaInfoText1" visible="false" text="value: TABITHA DARK BLUE \n449.000; color: #FFFFFF; width: 8; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="2.75 1.05 0"></a-entity>
+        <a-entity id="tabithaInfoText2" visible="false" text="value: Tabitha sepatu sandals koleksi terbaru Buccheri yang di desain khusus untuk memberikan Tampilan fashionable dengan perpaduan desain ankle strap dan material cow leather. \n\nSPECIFICATION: Cow Leather \nSize: 36 - 40; color: #FFFFFF; width: 5; align: left; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Regular.json" position="0 -0.75 0"></a-entity>
+        <a-image id="tabithaInfoClose" src="#close" height="0.75" width="0.75" material="alphaTest: 0.5; visible: false" position="2.65 1.7 0.01"
+                 event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1"
+                 event-set__mouseleave="_event: mouseleave; scale: 1 1 1"
+                 event-set__tarvis="_event: click; _target: #tabithaTrigger; material.visible: true"
+                 event-set__resvis01="_event: click; _target: #tabithaInfo; material.visible: false"
+                 event-set__resvis02="_event: click; _target: #tabithaInfoImage; material.visible: false"
+                 event-set__resvis03="_event: click; _target: #tabithaInfoText1; visible: false"
+                 event-set__resvis04="_event: click; _target: #tabithaInfoText2; visible: false"
+                 event-set__resvis05="_event: click; material.visible: false">
+        </a-image>
+      </a-entity>
+
+      <!--links-->
+      <a-entity geometry="primitive: circle; radius: 1" material="color: #00ff7f; side: double; opacity: 0.5" position="0 0 8" rotation="0 180 0" look-at="#cursor" link="href: gf-buccheri.html"
+                event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+                event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+                <a-entity text="value: Bagian \nTengah; color: #FFFFFF; width: 12; align: center; shader: msdf; font: https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/cabin/Cabin-Medium.json" position="0 -0.4 0"></a-entity>
+      </a-entity>
+      
+      <!--camera + cursor-->
+      <a-entity position="0 1.8 4">
+        <a-camera id="camera" look-controls="" wasd-controls-enabled="false" camera="active: true" rotation="-1.3750987083139854 -3.0939720937064483 0" position="0 0 0">
+          <a-cursor id="cursor" cursor="fuse: true; fuseTimeout: 1500; maxDistance: 30" geometry="primitive: ring; radiusInner: 0.031; radiusOuter: 0.05" material="color: #00FFFF; shader: flat" position="0 0 -1"
+                    animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+                    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1">
+          </a-cursor>
+        </a-camera>
+      </a-entity>
+      
+    </a-scene>
+
+  </body>
+</html>

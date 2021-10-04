@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>MOG Ground Floor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" sizes="192x192" href="https://aframe.io/images/aframe-logo-192.png">
+    
+    <!-- A-Frame javascript -->
+    <script src="../dist/aframe-v1.0.4.min.js"></script>
+    <script src="../dist/aframe-href-component.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
+    
+  </head>  
+  
+  <body>
+
+    <a-scene canvas="" keyboard-shortcuts="" vr-mode-ui="">
+
+      <!--assets-->
+      <a-assets>
+        <img id="MOG_GF-07" src="../assets/img/MOG_GF-07.jpg" />
+        <img id="nav" src="../assets/img/navigation.png" />
+      </a-assets>
+
+      <!--360-degree image-->
+      <a-sky src="#MOG_GF-07" rotation="0 -70 0"></a-sky>
+
+      <!--links-->
+      <a-image src="#nav" height="2" width="2" material="opacity: 0.5" position="0 0 -2" rotation="0 0 0" look-at="#cursor" link="href: gf-12.html"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+      </a-image>
+      <a-image src="#nav" height="2" width="2" material="opacity: 0.5" position="8 0 5.3" rotation="0 90 0" look-at="#cursor" link="href: gf-06.html"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+      </a-image>
+      <a-image src="#nav" height="2" width="2" material="opacity: 0.5" position="-1 0 12" rotation="0 180 0" look-at="#cursor" link="href: gf-04.html"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+      </a-image>
+      <a-image src="#nav" height="2" width="2" material="opacity: 0.5" position="-8 0 2.4" rotation="0 -90 0" look-at="#cursor" link="href: gf-08.html"
+               event-set__mouseenter="_event: mouseenter; scale: 1.2 1.2 1; material.opacity: 1"
+               event-set__mouseleave="_event: mouseleave; scale: 1 1 1; material.opacity: 0.5">
+      </a-image>
+
+      <!--camera + cursor-->
+      <a-entity position="0 1.8 4">
+        <a-camera id="camera" look-controls="" wasd-controls-enabled="false" camera="active: true" rotation="-1.3750987083139854 -3.0939720937064483 0" position="0 0 0">
+          <a-cursor id="cursor" cursor="fuse: true; fuseTimeout: 1500; maxDistance: 30" geometry="primitive: ring; radiusInner: 0.031; radiusOuter: 0.05" material="color: #00FFFF; shader: flat" position="0 0 -1"
+                    animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: 0.1 0.1 0.1; to: 1 1 1"
+                    animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1500; from: 1 1 1; to: 0.1 0.1 0.1"
+                    animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 500; to: 1 1 1">
+          </a-cursor>
+        </a-camera>
+      </a-entity>
+      
+    </a-scene>
+
+  </body>
+</html>
